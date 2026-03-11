@@ -4,7 +4,7 @@ using namespace std;
 class ABC
 {
 	int data1,data2;
-	public : 
+	public: 
 	ABC() // default cons
 	{
 		cout<<"default cons:"<<endl;
@@ -38,9 +38,10 @@ int main()
 {
 	ABC obj1;  // obj1.ABC()
 	ABC obj2(3,4);  // obj2.ABC(3,4)
-	ABC obj3=obj1; // obj3.ABC(obj1)
+	ABC obj3=obj2; // obj3.ABC(obj2)
 	obj1.Print();
 	obj2.Print();
 	obj3.Print();
+
 }
 

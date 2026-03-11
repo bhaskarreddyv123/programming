@@ -70,4 +70,7 @@ int main()
 	cout<<"size  "<<sizeof(obj)<<endl;
 	obj.print();
 	cout<<"size  "<<sizeof(obj)<<endl;
+
+	
+
 }

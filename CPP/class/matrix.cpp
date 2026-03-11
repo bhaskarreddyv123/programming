@@ -3,7 +3,7 @@ using namespace std;
 
 class matrix
 {
-	int a[2][2];
+	int a[2][3];
 	public:
 	void input();
 	void print();
@@ -16,7 +16,7 @@ void matrix::input()
 	cout<<"enter matrix"<<endl;
 	for(int i=0;i<2;i++)
 	{
-		for(int j=0;j<2;j++)
+		for(int j=0;j<3;j++)
 		{
 			cin>>a[i][j];
 		}
@@ -28,7 +28,7 @@ void matrix::print()
 	
 	for(int i=0;i<2;i++)
 	{
-		for(int j=0;j<2;j++)
+		for(int j=0;j<3;j++)
 		{
 			cout<<a[i][j]<<" ";
 		}
@@ -42,7 +42,7 @@ matrix &matrix::add(matrix &M)
 	static matrix temp;
 	for(int i=0;i<2;i++)
 	{
-		for(int j=0;j<2;j++)
+		for(int j=0;j<3;j++)
 		{
 			temp.a[i][j]=a[i][j]+M.a[i][j];
 		}
@@ -55,7 +55,7 @@ matrix &matrix::sub(matrix &M)
 	static matrix temp;
 	for(int i=0;i<2;i++)
 	{
-		for(int j=0;j<2;j++)
+		for(int j=0;j<3;j++)
 		{
 			temp.a[i][j]=a[i][j]-M.a[i][j];
 		}
@@ -68,9 +68,9 @@ matrix &matrix::mul(matrix &M)
 	static matrix temp;
 	for(int i=0;i<2;i++)
 	{
-		for(int j=0;j<2;j++)
+		for(int j=0;j<3;j++)
 		{
-			for(int k=0;k<2;k++)
+			for(int k=0;k<3;k++)
 			{
 				temp.a[i][j]+=a[i][k]*M.a[k][j];
 			}

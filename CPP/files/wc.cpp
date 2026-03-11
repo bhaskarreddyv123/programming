@@ -34,13 +34,15 @@ int main(int argc, char *argv[])
         if(buf[i]==' '||buf[i]=='\n')
         {
             Wcnt++;
+	    cout<<buf[i-1]<<" "<<Wcnt<<endl;
             if(buf[i]=='\n')
             {
                 Lcnt++;
             }
+	    cout<<buf[i-1]<<" "<<Lcnt<<endl;
         }
     }
-    Lcnt++;
+   // Lcnt++;
     delete []buf;
 
     file.close();

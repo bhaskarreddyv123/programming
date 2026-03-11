@@ -16,6 +16,8 @@ class abc
     }*/
     friend void operator>>(istream &,abc &);
     friend void operator<<(ostream&, abc&);
+    //void operator>>(istream &,abc &);
+    //void operator<<(ostream&, abc&);
 };
 
 void operator>>(istream &in,abc& s)

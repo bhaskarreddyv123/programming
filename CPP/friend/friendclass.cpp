@@ -19,7 +19,7 @@ class ABC
 		cout<<"data1:"<<data1<<endl;
 		cout<<"data2:"<<data2<<endl;
 	}
-	/**friend void XYZ :: SetData3(ABC &);// invalid because of incomplete type of XYZ as its declaration not yet completed.so solve this make complete class as a friend ***/
+	//friend void XYZ :: SetData3(ABC &);// invalid because of incomplete type of XYZ as its declaration not yet completed.so solve this make complete class as a friend 
 	friend class XYZ;
 };
 

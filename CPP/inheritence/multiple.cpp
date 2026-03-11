@@ -66,5 +66,6 @@ class sport:public student , public Branch
 int main()
 {
 	sport obj;
+	//obj.student::print();
 	obj.print();
 }

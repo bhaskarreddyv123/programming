@@ -1,12 +1,12 @@
 #include <iostream>
-using namespace std;
+//using namespace std;
 
 namespace ABC
 {
     int data=10;
     void print()
     {
-        cout<<"ABC print"<<endl;
+        std::cout<<"ABC print"<<std::endl;
     }
     namespace abc
     {
@@ -18,10 +18,10 @@ namespace ABC
         }D;
     };
 };
-
+using namespace ABC;
 int main()
 {
-    cout<<ABC::data<<endl;
-    cout<<ABC::abc::D.day<<" "<<ABC::abc::D.month<<" "<<ABC::abc::D.year<<endl;
-
+	std::cout<<data<<std::endl;
+	std::cout<<abc::D.day<<" "<<abc::D.month<<" "<<abc::D.year<<std::endl; 
 }
+

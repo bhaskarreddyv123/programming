@@ -13,8 +13,7 @@ class abc
 	abc(abc &obj)
 	{
 		strcpy(str,obj.str);
-		//str=obj.str;
-
+		//str=obj.str; error
 	}
 	void print()
 	{

@@ -18,13 +18,14 @@ class Student
 		 }
 		 void Print()
 		 {
-			 cout<<"roll"<<roll<<endl;
-			 cout<<"name:"<<name<<endl;
-			 cout<<"percentage:"<<percentage<<endl;
+			 cout<<"roll: "<<roll<<endl;
+			 cout<<"name: "<<name<<endl;
+			 cout<<"percentage: "<<percentage<<endl;
 		 }
 		 /** static member func **/
 		 static void PrintCnt()
 		 {
+			 //cout<<name<<endl;  //error because static memfnc access only static variables
 			 cout<<cnt<<endl;
 
 		 }
@@ -35,7 +36,7 @@ int main()
 {
 	Student S1;
 	S1.Print();
-	f1();
+	//f1();
 	//Student :: PrintCnt();
 	S1.PrintCnt();
 }
