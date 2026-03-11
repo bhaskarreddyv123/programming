@@ -1,7 +1,8 @@
 #include<stdio.h>
 int main(int argc,char **argv)
 {
-	int num1=0,num2=0,res,ch,i=0;
+	int num1=0,num2=0,res,i=0;
+	char ch;
 
 	while(argv[1][i])
 	{
@@ -33,19 +34,20 @@ int main(int argc,char **argv)
 	}
 	printf("num2=%d\n",num2);
 
-	ch=argv[3][0]-48;
+	//ch=argv[3][0]-48;
+	ch=argv[3][0];
 
 	switch(ch)
 	{
-		case 1:printf("ADDITION\n");
+		case '+':printf("ADDITION\n");
 		       res=num1+num2;
 		       printf("res =%d\n",res);
 		       break;
-		case 2:printf("SUBTRACTION\n");
+		case '-':printf("SUBTRACTION\n");
 		       res=num1-num2;
 		       printf("res =%d\n",res);
 		       break;
-		case 3:printf("MULTIPLICATION\n");
+		case '*':printf("MULTIPLICATION\n");
 		       res=num1*num2;
 		       printf("res =%d\n",res);
 		       break;

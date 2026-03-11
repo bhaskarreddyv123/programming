@@ -11,6 +11,7 @@ void print() {
 
 int main() {
     inc();
+    inc();
     print();
     return 0;
 }

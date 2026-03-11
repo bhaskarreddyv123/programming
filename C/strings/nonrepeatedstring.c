@@ -1,3 +1,6 @@
+//input:embedded     output:mb
+
+
 #include<stdio.h>
 #include<string.h>
 char *nonrepeated(char *ptr)

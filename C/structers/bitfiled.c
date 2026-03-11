@@ -2,8 +2,8 @@
 struct abc
 {
 	int a;
-	char ch;
-	int b;
+	char ch:5;
+	int b:6;
 };
 int main()
 {

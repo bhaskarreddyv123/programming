@@ -1,41 +1,41 @@
-#include<stdio.h>
-#include<string.h>
-#include<stdlib.h>
-int main(int argc,char *argv[])
-{
-	FILE *fp;
-	fclose(fp);
-	fp=fopen(argv[1],"r");
-	int Ccnt=0,Wcnt=0,Lcnt=0;
-	fseek(fp,0,SEEK_END);
-	Ccnt=ftell(fp);
-	rewind(fp);
-	char str[80],*buf;
-	buf=(char*)malloc(Ccnt+1);
-	printf(".........bbbb>>\n");
-	/*fread(str,sizeof(char),Ccnt,fp);
-	for(int i=0;i<Ccnt;i++)
-	{
-		if(buf[i]==' '||buf[i]=='\n')
-		{
-			Wcnt++;
-			if(buf[i]=='\n')
-				Lcnt++;
-		}
-		Lcnt++;
-	}*/
-	while(fscanf(fp,"%s",str)==1)
-	{
-		Wcnt++;
-		//printf("%s ",str);
-	}
-	rewind(fp);
-	while(fgets(str,80,fp))
-	{
-		//printf("%s",str);
-		Lcnt++;
-	}
-	fclose(fp);
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
-	printf("charcnt=%d\nwordcnt=%d\nlinecnt=%d\n",Ccnt,Wcnt,Lcnt);
+int main(int argc, char *argv[]) {
+    if (argc < 2) {
+        printf("Please provide a filename.\n");
+        return 1;
+    }
+
+    FILE *fp = fopen(argv[1], "r");
+    if (fp == NULL) {
+        printf("Could not open file.\n");
+        return 1;
+    }
+
+    int Ccnt = 0, Wcnt = 0, Lcnt = 0;
+    char str[80];
+
+    // Count characters
+    fseek(fp, 0, SEEK_END);
+    Ccnt = ftell(fp);
+    rewind(fp);
+
+    // Count words
+    while (fscanf(fp, "%s", str) == 1) {
+        Wcnt++;
+    }
+
+    // Count lines
+    rewind(fp);
+    while (fgets(str, sizeof(str), fp) != NULL) {
+        Lcnt++;
+    }
+
+    fclose(fp);
+
+    printf("Character count = %d\nWord count = %d\nLine count = %d\n", Ccnt, Wcnt, Lcnt);
+    return 0;
 }
+

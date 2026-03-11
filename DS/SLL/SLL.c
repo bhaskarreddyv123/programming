@@ -11,6 +11,7 @@ STU * AddLast(STU *);
 void Print(STU *);
 STU* reverse(STU *);
 STU * delFirst(STU *);
+STU *delLast(STU *);
 void print_nth_end(STU *,int);
 int main()
 {
@@ -19,7 +20,7 @@ int main()
 	//head=syncfromfile(head);
 	while(1)
 	{
-		printf("1.Add 2.Print 3.Del 4.reverse 5.print_nthnode_end 6.exit\n");
+		printf("1.Add 2.Print 3.Del First 4.reverse 5.print_nthnode_end 6.del Last 7.exit\n");
 		printf("enter the choice\n");
 		scanf("%d",&choice);
 		switch(choice)
@@ -36,7 +37,9 @@ int main()
 		       scanf("%d",&n);
 		       print_nth_end(head,n);
 		       break;
-		case 6:exit(0);
+		case 6:head=delLast(head);
+		       break;
+		case 7:exit(0);
 		}
 	}
 }
@@ -89,6 +92,26 @@ STU * delFirst(STU *ptr)
 	}
 	return ptr;// retunring new firstnode
 }
+STU *delLast(STU *ptr)
+{
+	STU *temp=NULL;
+	if(ptr==NULL)
+	{
+		printf("list is empty\n");
+	}
+	else
+	{
+		temp=ptr;
+		while(temp->link->link!=NULL)
+		{
+			temp=temp->link;
+		}
+		free(temp->link->link);;
+		temp->link=NULL;
+	}
+	return ptr;
+}
+
 void Print(STU *ptr)
 {
 	if(ptr==NULL) // list is empty

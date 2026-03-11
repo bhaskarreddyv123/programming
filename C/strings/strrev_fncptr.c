@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<string.h>
-char * reverse(char *ptr)
+void reverse(char *ptr)
 {
 	int i,n;
 	char ch;
@@ -11,18 +11,21 @@ char * reverse(char *ptr)
 		ptr[i]=ptr[n-1-i];
 		ptr[n-1-i]=ch;
 	}
-	return ptr;
+	//return ptr;
 }
 
 
 int main()
 {
 	char str[30],*str1;
-	char *(*ptr)(char *);
+	//char *(*ptr)(char *);
+	void (*ptr)(char *);
 	scanf("%[^\n]s",str);
 	ptr=reverse;
-	str1=ptr(str);
-	printf("%s\n",str1);
+	//str1=ptr(str);
+	//printf("%s\n",str1);
+	ptr(str);
+	printf("%s\n",str);
 }
 
 

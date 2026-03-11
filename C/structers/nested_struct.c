@@ -5,7 +5,7 @@ struct DOB
 	int date;
 	char mon[5];
 	int year;
-}dob;
+};
 struct employee
 {
 	int id;
@@ -19,9 +19,9 @@ struct employee
 int main()
 {
 	struct employee st;
-	printf("enter employee details\n");
+	printf("enter employee details id and name\n");
 	scanf("%d %[^\n]s", &st.id,st.name);
-	printf("enter dob details\n");
+	printf("enter dob details date month year\n");
 	scanf("%d",&st.dob.date);
 	__fpurge(stdin);
 	scanf("%[^\n]s",st.dob.mon);

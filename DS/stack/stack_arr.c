@@ -9,13 +9,13 @@ int top=-1;
 void Push(int );
 int Pop();
 int Peek();
-
+void print();
 int main()
 {
 	int data,choice;
 	while(1)
 	{
-		printf("1.Push 2.Pop 3.Peek 4.exit\n");
+		printf("1.Push 2.Pop 3.Peek 4.print 5.exit\n");
 		printf("enter the choice\n");
 		scanf("%d",&choice);
 		switch(choice)
@@ -38,11 +38,25 @@ int main()
 					printf("data pointed by top of the stack is %d\n",Peek());
 				}
 				break;
-			case 4: exit(0);
+			case 4: print();
+				break;
+			case 5:exit(0);
 		}
 	}
 }
-
+void print()
+{
+	if(top==-1)
+	{
+		printf("stack is empty\n");
+		return ;
+	}
+	for(int i=top;i>=0;i--)
+	{
+		printf("%d ",Stack[i]);
+	}
+	printf("\n");
+}
 void Push(int d)
 {
 	if(top==MAX-1)

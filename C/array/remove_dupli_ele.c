@@ -18,7 +18,7 @@ int main()
 		scanf("%d",&arr[i]);
 	}
 	print(arr,n);
-	/*for(i=0;i<n;i++)
+	for(i=0;i<n;i++)
 	{
 		for(j=i+1;j<n;j++)
 		{
@@ -33,9 +33,9 @@ int main()
 				j--;
 			}
 		}
-	}*/
+	}
 
-	for(i=0;i<n;i++)
+	/*for(i=0;i<n;i++)
 	{
 		for(j=i+1;j<n;j++)
 		{
@@ -46,7 +46,7 @@ int main()
 				n--;j--;
 			}
 		}
-	}
+	}*/
 	if(cnt==0)
 	{
 		printf("there is no duplicate element\n");

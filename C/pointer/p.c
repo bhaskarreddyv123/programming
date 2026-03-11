@@ -7,9 +7,11 @@ int main()
 	float f;
 	p=q=&var1;
 	var2=*p;
-	printf("%x %x\n",var1,var2);
+	printf("int var1=%x int var2=char *p-->%x\n",var1,var2);
 	var2=*q;
-	printf("%x %x\n",var1,var2);
+	printf("var1=%x var2=int *q--> %x\n",var1,var2);
 	f=*p;
-	printf("%f\n",f);
+	printf("float f=char *p---> %f\n",f);
+	f=*q;
+	printf("float f=int *q---> %f\n  ❤️ \n" ,f);
 }

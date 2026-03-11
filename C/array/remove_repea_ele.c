@@ -12,7 +12,7 @@ void print(int arr[],int n)
 }
 int main()
 {
-	int i,j,k,n,arr[20],cnt=0;;
+	int i,j,k,n,arr[20],cnt=0,flag=0;
 	printf("enter no.of elements\n");
 	scanf("%d",&n);
 	for(i=0;i<n;i++)
@@ -22,7 +22,8 @@ int main()
 	print(arr,n);
 	for(i=0;i<n;i++)
 	{
-		for(j=i;j<n;j++)
+		cnt=0;
+		for(j=i+1;j<n;j++)
 		{
 			if(arr[i]==arr[j])
 			{
@@ -34,12 +35,21 @@ int main()
 				n--;
 				j--;
 			}
-		printf("%d ",arr[j]);
 		}
-		printf("%d ",arr[i]);
-		i--;
+		if(cnt==1)
+		{
+			flag=1;
+			for(k=i;k<n;k++)
+			{
+				arr[k]=arr[k+1];
+			}
+			//arr[i]=arr[i+1];
+			i--;
+			n--;
+		}
+
 	}
-	if(cnt==0)
+	if(flag==0)
 	{
 		printf("there is no repeated elements\n");
 	}

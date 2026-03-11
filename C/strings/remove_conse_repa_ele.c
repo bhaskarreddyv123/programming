@@ -10,6 +10,7 @@ int main()
 		if(str[i]==str[i+1])
 		{
 			memmove(&str[i],&str[i]+2,strlen(&str[i]+2)+1);
+			//memmove(str+i,str+i+2,strlen(str+i+2)+1);
 			i--;
 		}
 	}
